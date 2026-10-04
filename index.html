@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Little Secret</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Space+Mono:wght@400;700&family=VT323&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="heart" viewBox="0 0 32 30">
+      <path d="M16 28C16 28 2 19 2 10C2 5.5 5.5 2.5 9.5 2.5C12.5 2.5 14.8 4.2 16 6.5C17.2 4.2 19.5 2.5 22.5 2.5C26.5 2.5 30 5.5 30 10C30 19 16 28 16 28Z" fill="currentColor" stroke-linejoin="round" style="stroke:var(--ink);stroke-width:2"/>
+    </symbol>
+    <symbol id="heart-flat" viewBox="0 0 32 30">
+      <path d="M16 28C16 28 2 19 2 10C2 5.5 5.5 2.5 9.5 2.5C12.5 2.5 14.8 4.2 16 6.5C17.2 4.2 19.5 2.5 22.5 2.5C26.5 2.5 30 5.5 30 10C30 19 16 28 16 28Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="flower" viewBox="0 0 100 100">
+      <g fill="currentColor" stroke-linejoin="round" style="stroke:var(--ink);stroke-width:3">
+        <ellipse cx="50" cy="26" rx="15" ry="23"/>
+        <ellipse cx="50" cy="26" rx="15" ry="23" transform="rotate(72 50 50)"/>
+        <ellipse cx="50" cy="26" rx="15" ry="23" transform="rotate(144 50 50)"/>
+        <ellipse cx="50" cy="26" rx="15" ry="23" transform="rotate(216 50 50)"/>
+        <ellipse cx="50" cy="26" rx="15" ry="23" transform="rotate(288 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="14" style="fill:var(--butter);stroke:var(--ink);stroke-width:3"/>
+    </symbol>
+    <symbol id="sprig" viewBox="0 0 100 200">
+      <path d="M50 80C46 120 54 160 50 198" fill="none" stroke-linecap="round" style="stroke:var(--ink);stroke-width:10"/>
+      <path d="M50 80C46 120 54 160 50 198" fill="none" stroke-linecap="round" style="stroke:var(--sage);stroke-width:5"/>
+      <path d="M50 150C22 148 12 128 14 116C40 118 50 132 50 150Z" stroke-linejoin="round" style="fill:var(--sage);stroke:var(--ink);stroke-width:3"/>
+      <path d="M50 178C78 176 88 156 86 144C60 146 50 160 50 178Z" stroke-linejoin="round" style="fill:var(--sage);stroke:var(--ink);stroke-width:3"/>
+      <use href="#flower" x="9" y="2" width="82" height="82"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="floaters" id="floaters" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- ===== Step 1: the secret code ===== -->
+  <section id="gate" class="gate">
+    <form id="codeForm" class="gate-card" autocomplete="off" novalidate>
+      <svg class="gate-heart c-rose" viewBox="0 0 32 30" aria-hidden="true"><use href="#heart"/></svg>
+      <h1>Secret code</h1>
+      <p>Type in the 4 numbers from your last clue.</p>
+      <label class="sr" for="code">4-digit code</label>
+      <input id="code" class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="0000">
+      <p id="codeErr" class="err" role="alert"></p>
+      <button id="unlock" class="btn" type="submit">Unlock</button>
+    </form>
+  </section>
+
+  <!-- ===== Step 2: the main site ===== -->
+  <div id="site" hidden>
+
+    <header class="hero">
+      <div class="hero-text">
+        <span class="pill">Code accepted</span>
+        <h1>Welcome Nyzelle!</h1>
+        <p class="lead">Great job on making it this far! Take a breather and look around this website that is for you! Once you're ready, solve the last puzzle at the bottom for your last clue...</p>
+      </div>
+      <svg class="bouquet" viewBox="0 0 360 320" role="img" aria-label="Pink flowers and hearts">
+        <use class="c-blush" href="#sprig" x="14" y="140" width="80" height="160"/>
+        <use class="c-pink" href="#sprig" x="116" y="76" width="112" height="224"/>
+        <use class="c-lilac" href="#sprig" x="248" y="116" width="92" height="184"/>
+        <use class="c-rose" href="#heart" x="58" y="62" width="40" height="38"/>
+        <use class="c-blush" href="#heart" x="262" y="44" width="30" height="28"/>
+        <use class="c-butter" href="#heart" x="176" y="10" width="26" height="24"/>
+      </svg>
+    </header>
+
+    <section class="section" id="photos">
+      <div class="section-head">
+        <h2>Us, so far</h2>
+        <p>A few of my favorite moments with you.</p>
+      </div>
+      <div class="collage" id="collage">
+<figure class="shot shot-1"><svg class="stick c-pink" viewBox="0 0 100 100" aria-hidden="true"><use href="#flower"/></svg><div class="photo"><img src="images/photos/photo-01-dinner.jpg" alt="Two people pouting at the camera in a softly blue-lit restaurant" width="540" height="960"></div><figcaption>Dinner!!</figcaption></figure>
+<figure class="shot shot-2"><span class="tape" aria-hidden="true"></span><div class="photo"><img src="images/photos/photo-02-homecoming.jpg" alt="Two people leaning together on a couch, one pouting and one smiling" width="540" height="960"></div><figcaption>Homecoming??</figcaption></figure>
+<figure class="shot shot-3"><svg class="stick c-rose" viewBox="0 0 32 30" aria-hidden="true"><use href="#heart"/></svg><div class="photo"><img src="images/photos/photo-03-clipped.jpg" alt="A playful close-up selfie with a big forehead and a goofy pout" width="720" height="960"></div><figcaption>clipped</figcaption></figure>
+<figure class="shot shot-4"><span class="tape" aria-hidden="true"></span><div class="photo"><img src="images/photos/photo-04-wteee.jpg" alt="A group of friends posing together at an indoor venue" width="960" height="720"></div><figcaption>WTEEE</figcaption></figure>
+<figure class="shot shot-5"><svg class="stick c-lilac" viewBox="0 0 100 100" aria-hidden="true"><use href="#flower"/></svg><div class="photo"><img src="images/photos/photo-05-vb-gamee.jpg" alt="Two people cheek to cheek, both pouting, at a gym" width="720" height="960"></div><figcaption>VB GAMEE</figcaption></figure>
+<figure class="shot shot-6"><svg class="stick c-pink" viewBox="0 0 32 30" aria-hidden="true"><use href="#heart"/></svg><div class="photo"><img src="images/photos/photo-06-nest-fest.jpg" alt="Two people in a parking lot wearing flower face stickers, one with a flower in their hair" width="720" height="960"></div><figcaption>Nest Fest!!</figcaption></figure>
+<figure class="shot shot-7"><span class="tape" aria-hidden="true"></span><div class="photo"><img src="images/photos/photo-07-blind-deaf-mute.jpg" alt="A smiling person wearing a green bandana over their eyes in a kitchen" width="960" height="720"></div><figcaption>Blind, deaf, mute</figcaption></figure>
+<svg class="cluster" viewBox="0 0 260 190" aria-hidden="true"><use class="c-pink" href="#sprig" x="6" y="58" width="62" height="124"/><use class="c-lilac" href="#sprig" x="78" y="12" width="84" height="168"/><use class="c-blush" href="#sprig" x="172" y="44" width="68" height="136"/><use class="c-rose" href="#heart" x="30" y="18" width="34" height="32"/><use class="c-butter" href="#heart" x="200" y="6" width="26" height="24"/></svg>
+</div>
+    </section>
+
+    <section class="section" id="playlist">
+      <div class="section-head">
+        <h2>Our playlist</h2>
+        <p>Press play and pick a track.</p>
+      </div>
+      <div class="deck-wrap">
+        <div class="deck">
+          <div class="lid">
+            <div class="disc" id="disc">
+              <span class="label"><img id="cover" alt=""></span>
+              <span class="hole"></span>
+            </div>
+          </div>
+          <div class="lcd" aria-live="off">
+            <div class="lcd-top"><span id="lcdTrk">TRK 01/05</span><span id="lcdState">STOP</span><span id="lcdTime">0:00</span></div>
+            <div class="lcd-title" id="lcdTitle"></div>
+          </div>
+          <div class="controls">
+            <button class="cbtn" id="prev" type="button" aria-label="Previous track"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12L18 6v12z"/></svg></button>
+            <button class="cbtn main" id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></button>
+            <button class="cbtn" id="next" type="button" aria-label="Next track"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM14.5 12L6 6v12z"/></svg></button>
+          </div>
+        </div>
+        <div class="deck-side">
+          <ol class="tracks" id="tracks"></ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="puzzle">
+      <div class="section-head">
+        <h2>One last puzzle</h2>
+        <p>Guess the five-letter word in six tries. The word is your next clue.</p>
+      </div>
+      <div class="puzzle">
+        <svg class="puzzle-flower a" viewBox="0 0 100 100" aria-hidden="true"><use href="#flower"/></svg>
+        <svg class="puzzle-flower b" viewBox="0 0 100 100" aria-hidden="true"><use href="#flower"/></svg>
+        <div class="rules">
+          <span><i class="sw sw-rose"></i>Right spot</span>
+          <span><i class="sw sw-butter"></i>Wrong spot</span>
+          <span><i class="sw sw-mauve"></i>Not in the word</span>
+        </div>
+        <p class="msg" id="msg" role="status"></p>
+        <div class="board" id="board" aria-label="Guess board"></div>
+        <div class="kb" id="kb"></div>
+        <div class="found" id="found" hidden>
+          <h3 id="foundTitle"></h3>
+          <p id="foundText"></p>
+        </div>
+        <button class="btn ghost" id="again" type="button" hidden>Try again</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <svg viewBox="0 0 150 56" aria-hidden="true">
+        <use class="c-pink" href="#flower" x="2" y="8" width="42" height="42"/>
+        <use class="c-rose" href="#heart" x="54" y="4" width="42" height="40"/>
+        <use class="c-lilac" href="#flower" x="104" y="8" width="42" height="42"/>
+      </svg>
+      <p>Made just for Nyzelle</p>
+    </footer>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
