@@ -11,31 +11,31 @@
       title: "The first hello",
       album: "0.1 Flaws and All",
       artist: "Wave to Earth",
-      cover: "images/covers/cover-01-0-1-flaws-and-all.jpg"
+      cover: "cover-01-0-1-flaws-and-all.jpg"
     },
     {
       title: "Late night talks",
       album: "Malcolm Todd",
       artist: "Malcolm Todd",
-      cover: "images/covers/cover-02-malcolm-todd.jpg"
+      cover: "cover-02-malcolm-todd.jpg"
     },
     {
       title: "Our favorite place",
       album: "The Art of Loving",
       artist: "Olivia Dean",
-      cover: "images/covers/cover-03-the-art-of-loving.jpg"
+      cover: "cover-03-the-art-of-loving.jpg"
     },
     {
       title: "Inside Knowledge",
       album: "echo",
       artist: "dosii",
-      cover: "images/covers/cover-04-echo.jpg"
+      cover: "cover-04-echo.jpg"
     },
     {
       title: "Whatever comes next",
       album: "you seem pretty sad for a girl so in love",
       artist: "Olivia Rodrigo",
-      cover: "images/covers/cover-05-you-seem-pretty-sad-for-a-girl-s.jpg"
+      cover: "cover-05-you-seem-pretty-sad-for-a-girl-s.jpg"
     }
   ];
   // --------------------------------
